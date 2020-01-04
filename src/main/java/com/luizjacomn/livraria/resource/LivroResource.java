@@ -16,12 +16,7 @@ public class LivroResource {
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public Livros getLivros() {
-		try {
-			return new Livros(repo.getLivros());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return new Livros();
+		return new Livros(repo.getLivros());
 	}
 
 }
